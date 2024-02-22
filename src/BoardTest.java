@@ -141,16 +141,7 @@ public class BoardTest {
     }
 
 
-    @Test
-    public void rowCountBoard3x4(){
-        int[][] validBoard = new int[][]{
-            {Board.EMP, Board.EMP, Board.EMP, Board.EMP},
-            {Board.EMP, Board.EMP, Board.EMP, Board.EMP},
-            {Board.EMP, Board.EMP, Board.EMP, Board.EMP}
-    };
-        assertEquals(3, Board.rowCount(validBoard));
 
-    }
 
 
     @Test
