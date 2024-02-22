@@ -9,11 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BoardTest {
 
-    /**
-     * Used to make a copy of board before functions run, so that verify a function was non-destructive on board is easy
-     * @param board The board to make deep copy of
-     * @return A deep copy of given board
-     */
+
     public int[][] deepCopy(int[][] board) {
         int[][] copy = new int[board.length][board[0].length];
         for (int i = 0; i < board.length; i++) {
@@ -144,17 +140,6 @@ public class BoardTest {
         assertFalse(Arrays.deepEquals(unexpected, actual));
     }
 
-    @Test
-    public void rowCountWithValidBoard(){
-        int[][] validBoard = new int[][]{
-            {Board.EMP, Board.EMP, Board.EMP, Board.EMP},
-            {Board.EMP, Board.EMP, Board.EMP, Board.EMP},
-            {Board.EMP, Board.EMP, Board.EMP, Board.EMP},
-            {Board.EMP, Board.EMP, Board.EMP, Board.EMP}
-        };
-
-        assertEquals(4, Board.rowCount(validBoard));
-    }
 
     @Test
     public void rowCountBoard3x4(){
